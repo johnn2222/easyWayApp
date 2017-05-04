@@ -1,11 +1,10 @@
-<ion-view>      
-<!--  <ion-nav-bar class="app-color"></ion-nav-bar>   -->
+<ion-view view-title="{{title}}">
     <div class="bar bar-header app-color">
-    <button  class="button icon ion-navicon menu-btn" ng-click="toggleLeftSideMenu()" menu-toggle="left"></button>  
-    <h1 class="title">Dashboard</h1>
+        <button  class="button icon ion-navicon menu-btn" ng-click="toggleSidebarJS()"></button>  
+        <h1 class="title">{{title}}</h1>
     </div>
-
- <div class="swiper-container">
+    
+    <div class="swiper-container">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
@@ -24,41 +23,76 @@
         <div class="swiper-scrollbar"></div>
     </div>
 
-<ion-content class="padding"> 
-   fsdfsadfas
-        <!-- Slider main container --> 
-   
-  </ion-content>
 
 
-<ion-side-menus enable-menu-with-back-views="false">
+    <div class="row">        
+        <div class="col no-pad no-margin">
+            <div class="module-list">
+            box1
+            </div>
+        </div>
+        <div class="col no-pad no-margin">
+            <div class="module-list">
+            box2
+            </div>
+        </div>
+        <div class="col no-pad no-margin">
+            <div class="module-list">
+            box3
+            </div>
+        </div>
+        
+        <div class="col no-pad no-margin" ng-click="openModule('notification')">
+            <div class="module-list">
+                <p style="text-align: center" >
+                <img height="32" width="32" src="img/notification.png"/>
+                Notification
+                </p>
+                
+            </div>
+        </div>
 
-        <ion-side-menu-content>
-          <ion-nav-bar class="bar-positive">
-            <ion-nav-back-button>
-            </ion-nav-back-button>
+    </div>
+       <div class="row">        
+        <div class="col no-pad no-margin">
+            <div class="module-list">
+            box1
+            </div>
+        </div>
+        <div class="col no-pad no-margin">
+            <div class="module-list">
+            box2
+            </div>
+        </div>
+        <div class="col no-pad no-margin">
+            <div class="module-list">
+            box3
+            </div>
+        </div>
+        
+        <div class="col no-pad no-margin">
+            <div class="module-list">
+            box4
+            </div>
+        </div>
 
-            <ion-nav-buttons side="left">
-              <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
-              </button>
-            </ion-nav-buttons>
-          </ion-nav-bar>
-
-        </ion-side-menu-content> 
-
-        <ion-side-menu side="left">
-          <ion-header-bar class="bar-assertive">
-            <h1 class="title">Left Menu</h1>
-          </ion-header-bar>
-          <ion-content>
-            <ul class="list">
-              <!-- Note each link has the 'menu-close' attribute so the menu auto closes when clicking on one of these links -->
-              <a href="#/event/check-in" class="item" menu-close>Check-in</a>
-              <a href="#/event/attendees" class="item" menu-close>Attendees</a>
-            </ul>
-          </ion-content>
-        </ion-side-menu>
-     </ion-side-menus>
-    
-
+    </div>
 </ion-view>
+
+<sidebarjs  on-close="onSidebarClose()"   on-open="onSidebarOpen()">
+  <h3>Left Menu</h3>
+  <nav>
+    <div>
+      <a sidebarjs-toggle href="https://github.com/SidebarJS/angular-sidebarjs" target="_blank"><div class="img github"></div>Github</a>
+      <a sidebarjs-toggle href="https://www.npmjs.com/package/angular-sidebarjs" target="_blank"><div class="img npm"></div>npm</a>
+      <a sidebarjs-toggle href="https://github.com/lorenzodianni" target="_blank"><div class="img author"></div>Author</a>
+    </div>
+    <div>
+      <a sidebarjs-toggle href="https://github.com/SidebarJS/angular-sidebarjs/blob/master/README.md" target="_blank"><div class="img wiki"></div>Wiki</a>
+      <a sidebarjs-toggle href="https://github.com/SidebarJS/angular-sidebarjs/issues" target="_blank"><div class="img bugs"></div>Bugs</a>
+    </div>
+  </nav>
+</sidebarjs>
+
+
+

@@ -1,5 +1,10 @@
-<ion-view view-title="Login">
-  <ion-nav-bar class="app-color"></ion-nav-bar>    
+<ion-view view-title="{{title}}">
+    <div class="bar bar-header app-color"> 
+         <ion-icon name="arrow-back"></ion-icon>
+        <h1 class="title">{{title}}</h1>
+    </div>
+    
+ 
   <ion-content class="padding">  
    <div class="row responsive-sm">        
         <div class="list list-inset">      
@@ -10,8 +15,8 @@
             <label class="item item-input margin-bottom">
         <input type="password" placeholder="password">
         </label>
-
-        <button class="button col-90 button-calm">Login</button>
+<a href="#dashboard">Login</a>
+            <button class="button col-90 button-calm"></button>
          </div>
    </div>
   </ion-content>

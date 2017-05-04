@@ -1,6 +1,13 @@
 /* Empty. Add your own CSS if you like */
+
 .margin-bottom{
     margin-bottom:5px;
+}
+.main-cont{
+    margin-top:44px;float:left;width:100%;height:auto;padding:0;
+}
+.pane, .view{    
+    background:#e5e5e5!important;
 }
 .margin-top{
     margin-top:5px;
@@ -26,7 +33,7 @@ height:250px;
 .swiper-slide {
 text-align: center;
 font-size: 18px;
-background: #fff;
+background: none;
 /* Center slide text vertically */
 display: -webkit-box;
 display: -ms-flexbox;
@@ -55,3 +62,16 @@ background: rgba(0,0,0,0.5);
 color:#fff;
 background: #000;
 }
+
+.module-list{
+    width:100%;margin:0;padding:10px;
+    float:left;background:#fff;    
+    color:#333;
+    border-bottom: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    font-size: 14px;
+}
+.no-margin{margin:0!important;}
+.no-pad{padding:0!important;}
+
+

@@ -1,11 +1,8 @@
 'use strict';
-easyWay.controller("dashBoardController",function($scope,$location,$ionicSideMenuDelegate){ 
-   //side menu
-    $scope.toggleLeftSideMenu = function() {      
-      $ionicSideMenuDelegate.toggleLeft();
-    };
-    
-    var mySwiper = new Swiper('.swiper-container', {       
+easyWay.controller("dashBoardController",function($scope,$location,$ionicLoading){     
+  $scope.title="DashBoard";
+  //slider
+  var mySwiper = new Swiper('.swiper-container', {       
         mode:'horizontal',
         paginationType:'bullets',
         autoResize: true,
@@ -22,6 +19,17 @@ easyWay.controller("dashBoardController",function($scope,$location,$ionicSideMen
         paginationClickable: true,
        
        });
- 
+       
+       //end
+       
+       //open module by module name
+       $scope.openModule=function(moduleName){          
+           switch(moduleName){
+               case 'notification':                   
+                $location.url('notification');
+                break;
+           }
+           
+       }
    
 });

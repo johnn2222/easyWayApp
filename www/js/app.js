@@ -1,4 +1,5 @@
-var easyWay = angular.module('easyWay', ['ionic']);
+
+var easyWay = angular.module('easyWay', ['ionic','ngRoute','ngSidebarJS']);
 
     easyWay.run(function($ionicPlatform) {
         $ionicPlatform.ready(function() {
@@ -18,13 +19,14 @@ var easyWay = angular.module('easyWay', ['ionic']);
                 templateUrl: '../src/views/dashBoard.html',
                 controller: 'dashBoardController'
             })      
+             .state('/notification', {
+                url:'/notification',
+                templateUrl: '../src/views/notification.html',
+                controller: 'notificationController'
+            })      
         $urlRouterProvider.otherwise('/login');
     });
     
-   //sidemenu
-easyWay.directive("sideMenu",function(){
-    return{      
-        restrict:'EM',       
-        templateUrl:'../src/layouts/sidemenu.html'        
-    }
-});
+ 
+    
+  
